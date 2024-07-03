@@ -4,7 +4,6 @@ package chat_v1;
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
-import "google/protobuf/wrappers.proto";
 
 option go_package = "github.com/tempdos/chat-server/pkg/chat_v1;chat_v1";
 
@@ -15,7 +14,7 @@ service ChatV1 {
 }
 
 message CreateRequest {
-  []string usernames = 1;
+  repeated string usernames = 1;
 }
 
 message CreateResponse {
